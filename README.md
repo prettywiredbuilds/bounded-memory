@@ -2,6 +2,8 @@
 
 A Python agent built with the Anthropic SDK that maintains persistent, token-bounded conversation memory across sessions. The agent stores messages in Azure DocumentDB, trims the active history to a fixed token budget, and folds dropped messages into a rolling summary that is re-injected into the system prompt on every turn.
 
+![Architecture diagram showing Scout's bounded-memory flow: session resumption reads from MongoDB, the rolling summary is injected into the system prompt, incoming user messages are token-counted and appended to the working window, the window is trimmed exchange-by-exchange to stay within the token budget, dropped exchanges are incrementally summarized and merged back into the stored summary, and both the updated session state and raw message logs are written to separate MongoDB collections.](bounded-memory-flow.png)
+
 ## Prerequisites
 
 - Python 3.8+
