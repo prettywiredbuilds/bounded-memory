@@ -59,6 +59,12 @@ Once running, type a message and press Enter to get a response. The agent resume
 
 Each response includes a token usage summary showing the number of input and output tokens consumed for that turn. Because the agent sends only a rolling summary plus a small recency window — rather than the full conversation history — input token counts stay low and predictable regardless of how long the conversation grows. This bounded approach can significantly reduce API costs compared to naively resending the entire transcript on every turn.
 
+## Beyond the Code
+
+Read [From Goldfish to Elephant: How AI Gets Its Memory](https://ai.prettywiredlabs.com/blog/how-ai-gets-its-memory) for the bigger picture behind the ideas in this repository.
+
+
+
 ## Issues & Questions
 
 If you run into any problems or have questions, please [file an issue](../../issues).
